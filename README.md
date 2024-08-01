@@ -31,15 +31,15 @@ License
 
     - NodeJS SDK improved to support the following new APIs
 
-      - [Export Audit Log API]()
-      - [Cadence API]()
-      - [Users Re-invite API]()
-      - [Record Clone API]()
-      - [Duplicate Record Check API]()
-      - [Data Enrichment API]()
-      - [Mass Delete Tags API]()
-      - [Picklist Option API]()
-      - [API Fetcher]()
+      - [Export Audit Log API](https://www.zoho.com/crm/developer/docs/api/v7/create-export-audit-log.html)
+      - [Cadence API](https://www.zoho.com/crm/developer/docs/api/v7/cadences/get-cadences.html)
+      - [Record Clone API](https://www.zoho.com/crm/developer/docs/api/v7/record-clone.html)
+      - [Duplicate Record Check API](https://www.zoho.com/crm/developer/docs/api/v7/enable-duplicate-record-check.html)
+      - [Data People Enrichment API](https://www.zoho.com/crm/developer/docs/api/v7/zia-enrichment/create-ppl-enrichment.html)
+      - [Data Org Enrichment API](https://www.zoho.com/crm/developer/docs/api/v7/zia-enrichment/get-config.html)
+      - [Mass Delete Tags API](https://www.zoho.com/crm/developer/docs/api/v7/mass-delete-tags.html)
+      - [Picklist Option API](https://www.zoho.com/crm/developer/docs/api/v7/picklist-values.html)
+      - [API Fetcher](https://www.zoho.com/crm/developer/docs/api/v7/list-available-rest-apis.html)
 
 
 For older versions, please [refer](https://github.com/zoho/zohocrm-nodejs-sdk-7.0/releases).
