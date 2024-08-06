@@ -25,6 +25,10 @@ License
 
 ## Latest Version
 
+- [2.0.0](/versions/2.0.0/README.md)
+
+  - Handled Error Structure in MassDeleteTags API.
+
 - [1.0.0](/versions/1.0.0/README.md)
 
     - NodeJS SDK upgraded to support v7 APIs.
@@ -48,7 +52,7 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-nodejs-sdk-7.
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-7.0/releases/tag/1.0.0) using npm
+For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-7.0/releases/tag/2.0.0) using npm
 
   - Install **Node** from [nodejs.org](https://nodejs.org/en/download/) (if not installed).
 
@@ -106,4 +110,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 > - For **Mass Convert API**, you will need to provide the **ZohoCRM.settings.fields.ALL** scope along with the **ZohoCRM.mass_convert.leads.CREATE** and **ZohoCRM.mass_convert.leads.READ** scope while generating the OAuthtoken. Otherwise, the system returns the **OAUTH-SCOPE-MISMATCH** error.
 
 ---
-For more details, kindly refer [here](/versions/1.0.0/README.md).
+For more details, kindly refer [here](/versions/2.0.0/README.md).
