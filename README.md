@@ -25,6 +25,75 @@ License
 
 ## Latest Version
 
+- [3.0.0](/versions/3.0.0/README.md)
+
+  > **_NOTE:_** We have updated the ***[Node.js SDK API package name](/versions/3.0.0/Package.md)*** as part of this release. Please review the updated package name and make the necessary adjustments to your codebase to ensure compatibility with the latest version of the SDK.
+
+  - Added new fields (**referenceValue**, **dealCategory** **delete**, and **showValue**) in fields PickListValue class.
+  - DealContactRolesOperations class method name changed(deleteContactRoleRealation to deleteContactRoleRelation).
+  - Added new **page_token** param in GetAttachmentsParam class.
+  - Added **category**, **sort_by**, **sort_order**, and **filters** param in GetEmailTemplatesParam class.
+  - Added new **filters** param in GetInventoryTemplatesParam class.
+  - Added new **delete** field in layouts SectionField class.
+  - Added new **delete** field in layouts Sections class.
+  - Modules **displayField** field datatype changed(String to Object).
+  - Added new **status** param in GetModulesParam class.
+  - Added new **paramInstance** param in ModulesOperations class **getModules** method.
+  - Email Related Records Email class **threadId** field datatype changed(Long to String).
+  - Added new **type** param in SearchRecordsParam class.
+  - Added new **cvid** param in RecordCountParam class.
+  - Added new **page_token**, **page**, and **per_page** param in GetRecordLockingInformationsParam class.
+  - Added new **delete** field in recordlockingconfiguration LockingRules class.
+  - Removed **module** param in ScoringRulesOperations class **getScoringRule** method.
+  - Added new **color_code** param in CreateTagsParam class.
+  - Update **recordId, moduleAPIName** to **moduleAPIName, recordId** param location in TagsOperations class **addTags** method.
+  - Update **recordId, moduleAPIName** to **moduleAPIName, recordId** param location in TagsOperations class **removeTags** method.
+  - Added new **ids** param in GetTerritoriesParam class.
+  - Added new **page** and **per_page** param in GetChildTerritoryParam class.
+  - Added new **paramInstance** param in UserGroupsOperations class **getAssociatedUsersCount** method.
+  - Added new **filters**, **page**, and **per_page** param in GetAssociatedUsersCountParam class.
+  - CadencesExecutionOperations class method name changed(enrolCadences to enrollCadences).
+  - CadencesExecutionOperations class method name changed(unenrolCadences to unenrollCadences).
+  - Deprecated and removed API methods:
+    - UsersTerritories
+      - validateBeforeTransferForAllTerritories
+      - validateBeforeTransfer
+      - delinkAndTransferFromAllTerritories
+      - delinkAndTransferFromSpecificTerritory
+
+    - Cadences
+      - [Cadence API](https://www.zoho.com/crm/developer/docs/api/v7/cadences/get-cadences.html)
+    - DealContactRoles
+      - [Remove Contact Role from a Specific Deal](https://www.zoho.com/crm/developer/docs/api/v7/remove-contact-role-from-a-specific-deal.html)
+    - InventoryConvert
+      - [Convert Inventory Records](https://www.zoho.com/crm/developer/docs/api/v7/inventory-convert.html)
+    - InventoryMassConvert
+      - [Mass Convert Inventory Records](https://www.zoho.com/crm/developer/docs/api/v7/mass-inventory-convert.html)
+      - [Get Mass Inventory Conversion Status](https://www.zoho.com/crm/developer/docs/api/v7/mass-inventory-conversion-status-api.html)
+    - Layouts
+      - [Update Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/update-custom-layout.html)
+      - [Delete Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/delete-custom-layout.html)
+      - [Activate Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/activate-custom-layout.html)
+      - [Deactivate Custom Layout](https://www.zoho.com/crm/developer/docs/api/v7/deactivate-custom-layout.html)
+    - Modules
+      - [Create Custom Module](https://www.zoho.com/crm/developer/docs/api/v7/create-custom-module-api.html)
+    - Record
+      - [Get Rich Text Fields](https://www.zoho.com/crm/developer/docs/api/v7/get-rich-text-fields.html)
+    - RecordLockingConfiguration
+      - [Record Locking Configuration APIs](https://www.zoho.com/crm/developer/docs/api/v7/get-record-locking-config.html)
+      - [Add Record Locking Configuration](https://www.zoho.com/crm/developer/docs/api/v7/add-record-locking-config.html)
+      - [Update Record Locking Configuration](https://www.zoho.com/crm/developer/docs/api/v7/update-record-locking-config.html)
+      - [Delete Record Locking Configuration](https://www.zoho.com/crm/developer/docs/api/v7/delete-record-locking-config.html)
+    - RecycleBin
+      - [Get Recycle Bin Records](https://www.zoho.com/crm/developer/docs/api/v7/get-recycle-bin.html)
+      - [Delete Recycle Bin Records](https://www.zoho.com/crm/developer/docs/api/v7/del-recycle-bin-records.html)
+    - UserGroups
+      - [Associated Groups of a User](https://www.zoho.com/crm/developer/docs/api/v7/associated-groups-of-a-user.html)
+    - UsersTerritories
+      - [Remove Territories from User](https://www.zoho.com/crm/developer/docs/api/v7/remove-territories-from-user.html)
+    - ZiaEnrichment
+      - [Enrichment Configuration](https://www.zoho.com/crm/developer/docs/api/v7/zia-enrichment/get-config.html)
+
 - [2.0.0](/versions/2.0.0/README.md)
 
   - Handled Error Structure in MassDeleteTags API.
@@ -52,7 +121,7 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-nodejs-sdk-7.
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-7.0/releases/tag/2.0.0) using npm
+For including the latest [version](https://github.com/zoho/zohocrm-nodejs-sdk-7.0/releases/tag/3.0.0) using npm
 
   - Install **Node** from [nodejs.org](https://nodejs.org/en/download/) (if not installed).
 
@@ -110,4 +179,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 > - For **Mass Convert API**, you will need to provide the **ZohoCRM.settings.fields.ALL** scope along with the **ZohoCRM.mass_convert.leads.CREATE** and **ZohoCRM.mass_convert.leads.READ** scope while generating the OAuthtoken. Otherwise, the system returns the **OAUTH-SCOPE-MISMATCH** error.
 
 ---
-For more details, kindly refer [here](/versions/2.0.0/README.md).
+For more details, kindly refer [here](/versions/3.0.0/README.md).
