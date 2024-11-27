@@ -22,7 +22,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "form-data": "3.0.1",
-    "got": "11.6.0",
+    "got": "11.8.5",
     "moment-timezone": "0.5.43",
     "mysql": "2.18.1",
     "tunnel": "0.0.6",

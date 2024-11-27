@@ -1,8 +1,10 @@
 ## Package Name Changes
 
- - We have updated the Node.js SDK API package name as part of this release.
+We have updated several package names in our Node.js SDK as part of this release to ensure consistency across all our SDKs. Please update your implementations with the new package names to prevent any execution issues.  Failure to do so will result in errors during compilation, leading to disruptions in your application’s functionality.
+ 
+The table below provides details of the changes:
 
-| Existing Name | New Name |
+| Package Name | Updated Package Name |
 | :------------- | :------------ |
 | TypeUserUsers | UserTypeUsers|
 | EmailUnblock | UnblockEmail|
