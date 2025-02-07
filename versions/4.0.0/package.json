@@ -1,0 +1,35 @@
+{
+  "name": "@zohocrm/nodejs-sdk-7.0",
+  "version": "4.0.0",
+  "description": "Node JS SDK for Zoho CRM",
+  "main": "lib/index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zoho/zohocrm-nodejs-sdk-7.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "Node",
+    "Zoho",
+    "CRM",
+    "OAuth2",
+    "API"
+  ],
+  "author": "Zoho CRM API Team (support@zohocrm.com)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "form-data": "3.0.1",
+    "got": "11.6.0",
+    "moment-timezone": "0.5.43",
+    "mysql": "2.18.1",
+    "tunnel": "0.0.6",
+    "winston": "3.3.3"
+  },
+  "homepage": "https://github.com/zoho/zohocrm-nodejs-sdk-7.0#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
