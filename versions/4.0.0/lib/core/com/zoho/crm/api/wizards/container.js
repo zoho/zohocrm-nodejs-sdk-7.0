@@ -1,0 +1,137 @@
+import {SDKException} from "../exception/sdk_exception.js";
+import {Constants} from "../../../../../../utils/util/constants.js";
+
+class Container{
+
+	id;
+	layout;
+	chartData;
+	screens;
+	keyModified = new Map();
+	/**
+	 * The method to get the id
+	 * @returns {BigInt} A BigInt representing the id
+	 */
+	getId()	{
+		return this.id;
+
+	}
+
+	/**
+	 * The method to set the value to id
+	 * @param {BigInt} id A BigInt representing the id
+	 */
+	setId(id)	{
+		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: id EXPECTED TYPE: BigInt", null, null);
+		}
+		this.id = id;
+		this.keyModified.set("id", 1);
+
+	}
+
+	/**
+	 * The method to get the layout
+	 * @returns {Layouts} An instance of Layouts
+	 */
+	getLayout()	{
+		return this.layout;
+
+	}
+
+	/**
+	 * The method to set the value to layout
+	 * @param {Layouts} layout An instance of Layouts
+	 */
+	async setLayout(layout)	{
+		const Layouts = (await (import("../layouts/layouts.js"))).MasterModel;
+		if((layout != null) && (!(layout instanceof Layouts)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: layout EXPECTED TYPE: Layouts", null, null);
+		}
+		this.layout = layout;
+		this.keyModified.set("layout", 1);
+
+	}
+
+	/**
+	 * The method to get the chartData
+	 * @returns {ChartData} An instance of ChartData
+	 */
+	getChartData()	{
+		return this.chartData;
+
+	}
+
+	/**
+	 * The method to set the value to chartData
+	 * @param {ChartData} chartData An instance of ChartData
+	 */
+	async setChartData(chartData)	{
+		const ChartData = (await (import("./chart_data.js"))).MasterModel;
+		if((chartData != null) && (!(chartData instanceof ChartData)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: chartData EXPECTED TYPE: ChartData", null, null);
+		}
+		this.chartData = chartData;
+		this.keyModified.set("chart_data", 1);
+
+	}
+
+	/**
+	 * The method to get the screens
+	 * @returns {Array} An Array representing the screens
+	 */
+	getScreens()	{
+		return this.screens;
+
+	}
+
+	/**
+	 * The method to set the value to screens
+	 * @param {Array} screens An Array representing the screens
+	 */
+	setScreens(screens)	{
+		if((screens != null) && (!(Object.prototype.toString.call(screens) == "[object Array]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: screens EXPECTED TYPE: Array", null, null);
+		}
+		this.screens = screens;
+		this.keyModified.set("screens", 1);
+
+	}
+
+	/**
+	 * The method to check if the user has modified the given key
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
+	 */
+	isKeyModified(key)	{
+		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
+		}
+		if(this.keyModified.has(key))	{
+			return this.keyModified.get(key);
+		}
+		return null;
+
+	}
+
+	/**
+	 * The method to mark the given key as modified
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
+	 */
+	setKeyModified(key, modification)	{
+		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
+		}
+		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
+		}
+		this.keyModified.set(key, modification);
+
+	}
+
+}
+export {
+	Container as MasterModel,
+	Container as Container
+}
